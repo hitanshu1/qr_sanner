@@ -38,13 +38,13 @@ ThemeData theme(bool isDark) {
         
         foregroundColor: foregroundColor,
         color: appBarColor,
-        iconTheme: const IconThemeData(color: Colors.white),
+        iconTheme: const IconThemeData(color: Colors.black),
         
         centerTitle: true,
         titleTextStyle: TextStyle(
           fontSize: SizeConfig.largeFont,
                 fontWeight: FontWeight.bold,
-                color: Colorz.white,
+                color: Colorz.black,
             ),
       ),
       switchTheme:

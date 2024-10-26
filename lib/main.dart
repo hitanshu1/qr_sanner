@@ -27,18 +27,13 @@ class MyApp extends StatelessWidget {
         designSize: const Size(375, 812),
         
         builder: (context,child) {
-          return MultiBlocProvider(
-            providers: [
-            
-            ],
-            child:  MaterialApp(
-               navigatorKey: NavigatorService.navigatorKey,
-                  debugShowCheckedModeBanner: false,
-                  theme: theme(true),
-                  themeMode: ThemeMode.light,
-               onGenerateRoute: AppRoutes.generateRoute,
-                  initialRoute: AppRoutes.initialRoute,
-            ),
+          return MaterialApp(
+             navigatorKey: NavigatorService.navigatorKey,
+                debugShowCheckedModeBanner: false,
+                theme: theme(false),
+                themeMode: ThemeMode.light,
+             onGenerateRoute: AppRoutes.generateRoute,
+                initialRoute: AppRoutes.initialRoute,
           );  
         }
       ),

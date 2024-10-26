@@ -5,13 +5,13 @@ class AppInfo {
   const AppInfo._();
 
   ///Name of the project
-  static const String appName = 'Crafto';
+  static const String appName = 'Qr Generator';
 
   ///Current version of the web
   static const String webVersionName = '1.0.0';
 
   ///Contact Email address to be displayed
-  static const String ccEmail = 'support@crafto';
+  static const String ccEmail = 'support@qr';
 
   ///Contact number to be displayed
   static const String ccNumber = '+919101097779';

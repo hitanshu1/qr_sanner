@@ -41,6 +41,7 @@ dependencies:
   oktoast: 
   flutter_screenutil:
   cached_network_image:
+  permission_handler: ^11.3.1
 
 dev_dependencies:
   flutter_test:
