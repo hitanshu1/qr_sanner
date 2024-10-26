@@ -10,30 +10,26 @@ class Scaffoldd extends StatelessWidget {
   /// The [bottomNavigationBar] is rendered below the [persistentFooterButtons]
   /// and the [body].
   final Widget? bottomNavigationBar;
+  /// floating action button
   final FloatingActionButton ?floatingActionButton;
   /// constructor
   const Scaffoldd({super.key,this.body,this.drawer,this.appBar,this.bottomNavigationBar,this.floatingActionButton});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width,
-      decoration: BoxDecoration(
-        gradient: Colorz.backgorund
-      ),
       
       child: Scaffold(
         floatingActionButton: floatingActionButton,
         bottomNavigationBar:bottomNavigationBar ,
         appBar: appBar,
         drawer:drawer ,
-        body: Container(
+        body: SizedBox(
            height: MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width,
-      decoration: BoxDecoration(
-        gradient: Colorz.backgorund
-      ),
+      
           child: body),
       ),
     );

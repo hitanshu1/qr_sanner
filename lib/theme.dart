@@ -10,8 +10,8 @@ import 'core/constants/constants.dart';
 /// Returns:
 /// - A `ThemeData` object with the specified brightness, primary color, and various other theme properties.
 ThemeData theme(bool isDark) {
-   final Color primary = Colorz.blue;
-   final Color foregroundColor = Colorz.blue;
+   const Color primary = Colorz.blue;
+   const Color foregroundColor = Colorz.blue;
   
    final Color  appBarColor = isDark ? Colorz.black : Colorz.white;
   final WidgetStateProperty<Color?> _property =
@@ -51,6 +51,6 @@ ThemeData theme(bool isDark) {
           SwitchThemeData(thumbColor: _property, trackColor: _property),
       radioTheme: RadioThemeData(fillColor: _property),
       checkboxTheme: CheckboxThemeData(fillColor: _property),
-      floatingActionButtonTheme:  FloatingActionButtonThemeData(
+      floatingActionButtonTheme:  const FloatingActionButtonThemeData(
           foregroundColor: foregroundColor, backgroundColor: primary));
 }

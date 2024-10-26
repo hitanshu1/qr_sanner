@@ -41,9 +41,4 @@ class Colorz {
   ///primary dark colors of the app
   static Color get dark => primary.dark();
 
-  /// vertical gradient color
-  static Gradient backgorund = LinearGradient(colors: [
-    Color(0xFF161518),
-    Color(0xFF421b20)
-  ]);
 }

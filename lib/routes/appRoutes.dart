@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import '../presentation/pages/generateQr/page.dart';
@@ -35,7 +34,7 @@ class AppRoutes {
     switch (routeName) {
       case initialRoute:
         return MaterialPageRoute(
-          builder: (BuildContext context) => HomePage(),
+          builder: (BuildContext context) => const HomePage(),
         );
 
       case generateQrCode:

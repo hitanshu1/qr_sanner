@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:qr_code_scanner_plus/qr_code_scanner_plus.dart';
@@ -55,24 +55,39 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Column(
         children: [
-          Expanded(
+          _scanQrCode(),
+         _resultText()
+        ],
+      ),
+    );
+  }
+
+  /// A widget to scan QR code
+  ///
+  /// It uses the package [QRCodeScannerPlus] to scan a QR code.
+  /// The widget is an Expanded widget and takes up the available space.
+  /// The QR code is displayed in a QRView widget and the result is displayed
+  /// below the QR code after a successful scan.
+  Widget _scanQrCode() {
+    return Expanded(
             flex: 5,
             child: QRView(
               key: qrKey,
               onQRViewCreated: _onQRViewCreated,
             ),
-          ),
-          Expanded(
-            child: Center(
-              child: Txt(
-                resultText,
-                color: Colorz.black,
-                fontWeight: FontWeight.bold,
-                fontSize: 20.sp,
-              ),
-            ),
-          ),
-        ],
+          );
+  }
+
+  /// A widget to display the result of the QR code scan.
+  ///
+  /// The result is displayed in a Text widget.
+  Widget _resultText() {
+    return Expanded(
+      child: Txt(
+        resultText,
+        color: Colorz.black,
+        fontWeight: FontWeight.bold,
+        fontSize: 20.sp,
       ),
     );
   }
