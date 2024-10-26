@@ -683,7 +683,7 @@ class Widgets {
     return Txt(
       text,
       fontSize: fontSize??SizeConfig.largeFont,
-      color: color??Colors.white,
+      color: color??Colors.black,
       fontWeight: FontWeight.bold,
     );
   }

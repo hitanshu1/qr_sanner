@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+import '../presentation/pages/generateQr/page.dart';
 import '../presentation/pages/home/page.dart';
 
 
@@ -11,13 +12,8 @@ class AppRoutes {
   /// initial route
   static const String initialRoute = '/';
 
-  /// payment page
-  static const String payment = '/payment';
-
-  /// dashboard page
-  static const String dashboard = '/dashboard';
-
-  static const String userDetails = '/userDetails';
+  /// generate qr code
+  static const String generateQrCode = '/generateQrCode';
 
   /// Generates a route based on the given [RouteSettings].
   ///
@@ -40,6 +36,11 @@ class AppRoutes {
       case initialRoute:
         return MaterialPageRoute(
           builder: (BuildContext context) => HomePage(),
+        );
+
+      case generateQrCode:
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const QrCodeGeneratorPage(),
         );
 
       default:
